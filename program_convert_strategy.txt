@@ -1,0 +1,11 @@
+** How to convert these definitions to programs
+
+** what to do at choice points
+
+**detailed complexity analysis of the initial definition.
+
+**design of final algorithm
+
+**design of data structure
+
+**implementation of final program.
