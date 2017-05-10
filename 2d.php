@@ -1,5 +1,4 @@
 <?php
-
 $handle = fopen ("php://stdin","r");
 $arr = array();
 for($arr_i = 0; $arr_i < 6; $arr_i++) {
@@ -39,6 +38,39 @@ for( $i = 0; $i <= $lmt ; $i++ ){
         }
         
     }
+}
+echo $max;
+?>
+
+
+
+
+
+<?php
+$handle = fopen ("php://stdin","r");
+$arr = array();
+for($arr_i = 0; $arr_i < 6; $arr_i++) {
+   $arr_temp = fgets($handle);
+   $arr[] = explode(" ",$arr_temp);
+  array_walk($arr[$arr_i],'intval');
+}
+
+//print_r($arr);
+$lmt    = count($arr) - 2;
+$in_lmt = count($arr);
+$sum    = 0;
+$max    = 0;
+$k = 0;
+for( $k = 0; $k <= $in_lmt ; $k++ ){
+  for( $i = 0; $i <= $lmt ; $i++ ){          
+      for( $j = $i ; $j <= ($i+2) ; $j++ ){        
+        $sum = $sum + $arr[$k][$j];
+        $sum = $sum + $arr[$k+2][$j];        
+      }
+      $sum = $sum + $arr[$k+1][$i+1];
+      $max = ($sum > $max ? $sum : $max );
+      $sum = 0;
+  }
 }
 echo $max;
 ?>

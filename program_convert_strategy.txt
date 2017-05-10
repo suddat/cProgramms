@@ -1,8 +1,10 @@
-** How to convert these definitions to programs
+Data Structures and Algorithms Notes
 
-** what to do at choice points
+** How to convert problem definitions to programs
 
-**detailed complexity analysis of the initial definition.
+** what to do at choice points (where to divide if we r applying divide and conqour technique)
+
+**detailed complexity analysis of the initial definition.(at what choice point algorithm will be efficient)
 
 **design of final algorithm
 
