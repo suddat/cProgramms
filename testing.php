@@ -1,4 +1,29 @@
-      $testData['000004'] = array('code'=>'000004',
-        'child'=>array('000088'=>array('code'=>'000088','child'=>array('000010'=>array('code'=>'000010','child'=>array('000041'=>array('code'=>'000041')))))));
+<html>
 
+v ng-controller="SIController">
+<select id="current-command" ng-model="currentCommand">
+  <option ng-repeat="city in availableCommands" value="{{city}}">{{city}}</option>
+</select>
+<!-- <button ng-click="changeSelectedOption()">Select something</button> -->
+    {{currentCommand}}
+</div>
 
+</html>
+
+<script>
+
+var myApp = angular.module('myApp', []);
+
+function SIController($scope) {
+
+	$scope.availableCommands = ['pan india','mumbai','delhi','chennai'];
+	
+	$scope.currentCommand = $scope.availableCommands[0];
+    
+	$scope.changeSelectedOption = function() {
+        $scope.currentCommand = $scope.availableCommands[1];
+	};
+	
+};
+
+</script>
